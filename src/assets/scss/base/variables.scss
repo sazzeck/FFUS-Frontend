@@ -1,0 +1,21 @@
+$fontFamily: "Roboto";
+$fontSize: rem(24);
+
+$mainColor: #2C2A2D;
+$whiteColor: #FFFFFF;
+$yellowColor: #E1FF2D;
+$purpleColor: #D3B7F9;
+$greyColor: #C3C2C3;
+$darkgreyColor: #ffffff40;
+
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1296;
+$containerPadding: 32;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);

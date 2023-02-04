@@ -1,0 +1,57 @@
+%ic {
+    font-family: icons;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+    &:before {
+        @extend %ic;
+        display: block;
+    }
+}
+
+._icon-b-calculator:before {
+    content: "\e900";
+}
+
+._icon-b-hammer:before {
+    content: "\e901";
+}
+
+._icon-b-ruler:before {
+    content: "\e902";
+}
+
+._icon-s-facebook:before {
+    content: "\e903";
+}
+
+._icon-s-google:before {
+    content: "\e904";
+}
+
+._icon-s-instagram:before {
+    content: "\e905";
+}
+
+._icon-s-telegram:before {
+    content: "\e906";
+}
+
+._icon-w-avatar:before {
+    content: "\e907";
+}
+
+._icon-w-like:before {
+    content: "\e908";
+}
+
+._icon-w-medal:before {
+    content: "\e909";
+}

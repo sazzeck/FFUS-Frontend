@@ -1,0 +1,54 @@
+@use "sass:math";
+
+@import "base/variables.scss";
+@import "base/mixins.scss";
+@import "base/reset.scss";
+
+
+@import "fonts/fonts";
+@import "fonts/icons";
+
+
+body {
+    background-color: $mainColor;
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+    .loaded & {
+    }
+}
+
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    > main {
+        flex: 1 1 auto;
+    }
+    > * {
+        min-width: 0;
+    }
+}
+
+
+[class*="__container"] {
+    max-width: rem(1178);
+    box-sizing: content-box;
+    @include adaptiveValue("margin-left", 56, 32);
+    @include adaptiveValue("margin-right", 56, 32);
+}
+
+[class*="__container-big"] {
+    @if ($maxWidthContainer>0) {
+        max-width: rem($maxWidthContainer);
+        box-sizing: content-box;
+        margin: 0 auto;
+        color: $whiteColor;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
