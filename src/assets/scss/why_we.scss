@@ -1,0 +1,112 @@
+.why-we {
+    &__container {
+        @media (max-width: $tablet) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include adaptiveValue("margin-bottom", 88, 22);
+        @include adaptiveValue("margin-top", 88, 22);
+    }
+
+    &__lable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $purpleColor;
+        @include adaptiveValue("width", 400, 240);
+        @include adaptiveValue("height", 96, 56);
+        @include adaptiveValue("margin-bottom", 88, 22);
+        @include adaptiveValue("border-radius", 48, 36);
+
+        @media (max-width: $mobile) {
+            @include adaptiveValue("margin-bottom", 72, 14);
+        }
+
+        &__text {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 900;
+            color: #2C2A2D;
+            text-transform: uppercase;
+            @include adaptiveValue("font-size", 32, 18);
+            @include adaptiveValue("line-height", 38, 22);
+        }
+    }
+
+    &__content {
+
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            @include adaptiveValue("margin-top", 16, 8);
+        }
+
+        &__block {
+            background-color: $whiteColor;
+            @include adaptiveValue("min-height", 420, 332);
+
+            @media (max-width: $mobile) {
+                min-height: rem(224);
+                @include adaptiveValue("max-width", 800, 360);
+            }
+        }
+
+        &__block-big {
+            background-color: $yellowColor;
+            @include adaptiveValue("margin-left", 24, 4);
+            @include adaptiveValue("margin-right", 24, 4);
+
+            @media (max-width: $mobile) {
+                @include adaptiveValue("max-width", 800, 360);
+                @include adaptiveValue("margin-top", 16, 8);
+                @include adaptiveValue("margin-bottom", 16, 8);
+            }
+        }
+
+        &__lable {
+            text-align: center;
+        }
+
+        &__icon {
+            @include adaptiveValue("font-size", 64, 32);
+            @include adaptiveValue("margin-bottom", 32, 8)
+        }
+
+        &__header {
+            text-transform: uppercase;
+            @include adaptiveValue("font-size", 24, 16);
+            @include adaptiveValue("line-height", 28, 24);
+            @include adaptiveValue("margin-bottom", 32, 16);
+        }
+
+        &__text {
+            font-weight: 400;
+            letter-spacing: em(1);
+            @include adaptiveValue("font-size", 24, 16);
+            @include adaptiveValue("line-height", 28, 24);
+        }
+    }
+
+}
+
+.w-content-block {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    color: $mainColor;
+    @include adaptiveValue("border-radius", 64, 36);
+    @include adaptiveValue("padding-left", 32, 24);
+    @include adaptiveValue("padding-right", 32, 24);
+    @include adaptiveValue("padding-top", 56, 24);
+    @include adaptiveValue("padding-bottom", 56, 24);
+}

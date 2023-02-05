@@ -1,0 +1,93 @@
+.footer {
+    &__container {
+        @media (max-width: $mobileSmall) {
+            @include adaptiveValue("margin-right", 32, 16);
+            @include adaptiveValue("margin-left", 32, 16);
+        }
+    }
+
+    &__wrapper {
+        height: rem(320);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: em(24);
+        text-transform: uppercase;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            height: rem(240);
+            @include adaptiveValue("padding-top", 64, 48);
+            @include adaptiveValue("padding-bottom", 64, 48);
+        }
+
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: rem(320);
+            border-right: 1px solid $greyColor;
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
+
+            &__list {
+                padding-right: rem(64);
+                padding-left: rem(16);
+            }
+
+            &__item {
+                line-height: rem(24);
+                padding-top: rem(16);
+                padding-bottom: rem(16);
+            }
+
+            &__link {
+                transition: all 0.5s ease 0s;
+
+                &:hover {
+                    color: $purpleColor;
+                }
+            }
+        }
+
+        &__social {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-around;
+
+            color: $greyColor;
+            height: rem(168);
+
+            &__lable {
+                @media (max-width: $mobile) {
+                    @include adaptiveValue("font-size", 20, 16)
+                }
+            }
+
+            &__list {
+                display: flex;
+                align-content: center;
+                justify-content: space-around;
+                @include adaptiveValue("height", 45, 35);
+            }
+
+            &__link {
+                @include adaptiveValue("font-size", 40, 30);
+                transition: all 0.5s ease 0s;
+
+                &:hover {
+                    @include adaptiveValue("font-size", 42, 32);
+                    color: $purpleColor;
+                }
+            }
+        }
+    }
+}

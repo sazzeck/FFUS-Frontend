@@ -1,0 +1,86 @@
+.about-us {
+    background-color: $whiteColor;
+
+    &__container {
+        @media (max-width: $mobile) {
+            margin: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        color: $mainColor;
+        font-style: normal;
+        @include adaptiveValue("padding-top", 112, 32);
+        @include adaptiveValue("padding-bottom", 112, 32);
+
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: rem(224);
+        }
+    }
+
+    &__lable {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include adaptiveValue("margin-right", 32, 16);
+
+        @media (max-width: $mobile) {
+            margin-right: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $yellowColor;
+            padding-left: 100vw;
+            margin-left: -100vw;
+            @include adaptiveValue("max-height", 212, 164);
+            @include adaptiveValue("padding-top", 32, 24);
+            @include adaptiveValue("padding-bottom", 32, 24);
+            @include adaptiveValue("border-radius", 48, 36);
+        }
+
+        &__text {
+            font-family: 'Raleway';
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            @include adaptiveValue("font-size", 72, 24);
+            @include adaptiveValue("line-height", 80, 28);
+            @include adaptiveValue("margin-left", 32, 24);
+            @include adaptiveValue("margin-right", 32, 24);
+        }
+    }
+
+    &__body {
+        
+        &__item {
+            max-width: rem(740);
+            @include adaptiveValue("padding-top", 24, 16);
+            @include adaptiveValue("padding-bottom", 24, 16);
+            @include adaptiveValue("padding-left", 16, 8);
+            @include adaptiveValue("padding-right", 16, 8);
+
+            @media (max-width: $mobile) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &__text {
+            font-family: 'Roboto';
+            font-weight: 400;
+            letter-spacing: em(1);
+            @include adaptiveValue("font-size", 24, 16);
+            @include adaptiveValue("line-height", 28, 24);
+        }
+    }
+}

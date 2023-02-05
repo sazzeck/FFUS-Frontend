@@ -1,13 +1,12 @@
 @use "sass:math";
 
-@import "base/variables.scss";
 @import "base/mixins.scss";
-@import "base/reset.scss";
-
 
 @import "fonts/fonts";
 @import "fonts/icons";
 
+@import "base/variables.scss";
+@import "base/reset.scss";
 
 body {
     background-color: $mainColor;
@@ -19,8 +18,7 @@ body {
     }
 }
 
-
-.wrapper {
+#app {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,6 +31,12 @@ body {
     }
 }
 
+.page {
+    &__main {
+        @include adaptiveValue("padding-right", 72, 8);
+        @include adaptiveValue("padding-left", 72, 8);
+    }
+}
 
 [class*="__container"] {
     max-width: rem(1178);
@@ -52,3 +56,11 @@ body {
             padding: 0 rem(math.div($containerPadding, 2));
         }
     }
+
+@import "about_us.scss";
+@import "banner.scss";
+@import "contacts.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "why_we.scss";
+@import "common.scss"

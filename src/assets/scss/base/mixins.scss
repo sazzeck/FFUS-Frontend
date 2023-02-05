@@ -3,7 +3,6 @@
 	@return $result;
 }
 
-
 @function em($px, $current: 16) {
 	$result: math.div($px, $current) + em;
 	@return $result;

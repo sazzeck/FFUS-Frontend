@@ -1,0 +1,123 @@
+.contacts {
+    background-color: $whiteColor;
+    border-top: 2px solid $mainColor;
+
+    &__container {
+        @media (max-width: $mobile) {
+            margin: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include adaptiveValue("padding-top", 112, 32);
+        @include adaptiveValue("padding-bottom", 112, 32);
+
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: rem(224);
+        }
+    }
+
+    &__lable {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: $purpleColor;
+        border-top-right-radius: rem(64);
+        border-bottom-right-radius: rem(64);
+        padding-left: 100vw;
+        margin-left: -100vw;
+        @include adaptiveValue("max-height", 212, 164);
+        @include adaptiveValue("padding-right", 88, 32);
+        @include adaptiveValue("padding-top", 32, 16);
+        @include adaptiveValue("padding-bottom", 32, 16);
+
+        @media (max-width: $mobile) {
+            order: 1;
+            @include adaptiveValue("margin-top", 72, 48);
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            color: $mainColor;
+
+            @media (max-width: $mobile) {
+                @include adaptiveValue("margin-left", 72, 24);      
+            }
+        }
+
+        &__email {
+            @include adaptiveValue("font-size", 32, 18);
+            @include adaptiveValue("line-height", 36, 22);
+        }
+
+        &__phone-items {
+            @include adaptiveValue("font-size", 24, 14);
+            @include adaptiveValue("line-height", 28, 16);
+
+            @media (max-width: $mobile) {
+                @include adaptiveValue("margin-top", 24, 8);
+            }
+        }
+
+        &__item {
+            @include adaptiveValue("margin-top", 8, 4);
+            @include adaptiveValue("margin-bottom", 8, 4);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: rem(400);
+        color: #2C2A2D;
+        @include adaptiveValue("padding-left", 16, 8);
+        @include adaptiveValue("padding-right", 16, 8);
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__wrapper {
+            max-width: rem(400);
+            margin: auto;
+        }
+
+        &__header {
+            &__lable {
+                text-align: center;
+                text-transform: uppercase;
+                @include adaptiveValue("font-size", 32, 24);
+                @include adaptiveValue("margin-bottom", 32, 24);
+            }
+
+            &__text {
+                font-size: rem(16);
+                line-height: rem(20);
+                letter-spacing: em(1);
+                @include adaptiveValue("font-size", 18, 14);
+                @include adaptiveValue("line-height", 20, 18);
+                @include adaptiveValue("margin-left", 32, 16);
+                @include adaptiveValue("margin-right", 32, 16);
+                @media (max-width: $mobile) {
+                    @include adaptiveValue("padding-left", 32, 16);
+                    @include adaptiveValue("padding-right", 32, 16);
+                }
+            }
+        }
+    }
+
+}

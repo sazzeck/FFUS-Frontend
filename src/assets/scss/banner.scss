@@ -1,0 +1,195 @@
+.main-block {
+    background-color: $yellowColor;
+    padding-top: rem(88);
+    padding-bottom: rem(88);
+
+    @media (max-width: $mobile) {
+        padding-top: rem(144);
+    }
+
+    &__container-big {
+        padding: 0;
+        background-color: $mainColor;
+        border-radius: 48px;
+    }
+
+    &__container {
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-areas:
+            "lable lable_vertical closet"
+            "icons lable_vertical closet"
+            "bottom_left lable_vertical bottom_right";
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: 0.5fr 0.25fr 0.25fr;
+        @include adaptiveValue("padding-top", 24, 8);
+        @include adaptiveValue("padding-bottom", 24, 8);
+
+        @media (max-width: $mobile) {
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: 0.5fr 0.25fr 0.25fr;
+            grid-template-areas:
+                "lable lable lable_vertical"
+                "icons icons lable_vertical"
+                "bottom_left bottom_right lable_vertical";
+        }
+
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: auto auto 1fr;
+            grid-template-rows: 0.5fr 0.25fr 0.25fr;
+            grid-template-areas:
+                "lable lable_vertical icons"
+                "bottom_left lable_vertical icons"
+                "bottom_right lable_vertical icons";
+        }
+    }
+
+    &__lable {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $mobile) {
+            justify-content: flex-start
+        }
+
+        &:nth-child(1) {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: right;
+            grid-area: lable;
+
+
+            &>h1:nth-child(1) {
+                color: $purpleColor;
+                @include adaptiveValue("font-size", 72, 24);
+                @include adaptiveValue("line-height", 76, 28);
+            }
+
+            &>h1:nth-child(2) {
+                color: $whiteColor;
+                @include adaptiveValue("font-size", 88, 36);
+                @include adaptiveValue("line-height", 92, 40);
+            }
+        }
+
+        &:nth-child(2) {
+            grid-area: lable_vertical;
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 900;
+
+            &>h1 {
+                color: $darkgreyColor;
+                writing-mode: vertical-lr;
+                transform: scale(-1, -1);
+                white-space: nowrap;
+                @include adaptiveValue("font-size", 120, 36);
+                @include adaptiveValue("line-height", 136, 52);
+            }
+        }
+    }
+
+    &__item {
+        grid-area: icons;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include adaptiveValue("column-gap", 32, 16);
+
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &__icon {
+            background-color: $whiteColor;
+            color: $mainColor;
+            padding: rem(8);
+            border-radius: rem(16);
+            @include adaptiveValue("font-size", 48, 24);
+            @include adaptiveValue("line-height", 52, 28);
+        }
+    }
+
+    &__closet {
+        grid-area: closet;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        &__img {
+            @include adaptiveValue("widht", 400, 120);
+            @include adaptiveValue("height", 376, 128);
+        }
+    }
+
+    &__bottom {
+
+        &__left {
+            grid-area: bottom_left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &__lable {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                color: $greyColor;
+                text-transform: uppercase;
+
+                &__text {
+                    @include adaptiveValue("font-size", 16, 12);
+                    @include adaptiveValue("line-height", 20, 14);
+                }
+            }
+        }
+
+        &__right {
+            grid-area: bottom_right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            @media (max-width: $mobileSmall) {
+                justify-content: flex-start;
+            }
+
+            &__order {
+                color: $mainColor;
+                background-color: $yellowColor;
+                border-radius: rem(64);
+                background-size: 200%;
+                transition: .5s ease 0s;
+                @include adaptiveValue("font-size", 24, 16);
+                @include adaptiveValue("line-height", 28, 20);
+                @include adaptiveValue("padding-left", 80, 16);
+                @include adaptiveValue("padding-right", 80, 16);
+                @include adaptiveValue("padding-top", 8, 4);
+                @include adaptiveValue("padding-bottom", 8, 4);
+
+                &:hover {
+                    background-color: $purpleColor;
+                }
+            }
+
+        }
+    }
+
+}

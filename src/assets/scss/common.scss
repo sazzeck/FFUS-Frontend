@@ -1,0 +1,103 @@
+.logo {
+    position: relative;
+    height: rem(64);
+    width: rem(56);
+    z-index: 5;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include adaptiveValue("margin-top", 32, 24);
+    @include adaptiveValue("padding-left", 40, 16);
+    @include adaptiveValue("padding-right", 40, 16);
+
+    &__row {}
+
+    &__column {}
+
+    &__line {}
+
+    &__input {
+        z-index: 1;
+        width: 100%;
+        border-bottom: 2px solid $greyColor;
+        padding: 0 rem(4);
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: em(1);
+        color: $mainColor;
+        @include adaptiveValue("font-size", 20, 16);
+        @include adaptiveValue("line-height", 24, 20);
+        @include adaptiveValue("margin-bottom", 40, 32);
+
+        &:last-child {
+            @include adaptiveValue("margin-bottom", 16, 8);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $greyColor;
+
+        }
+
+        &._form-error {
+            color: #d41111;
+
+            &::placeholder {
+                color: #d41111;
+            }
+        }
+    }
+
+    &__button {
+        background: $yellowColor;
+        border-radius: rem(64);
+        font-family: 'Raleway';
+        font-weight: 900;
+        text-transform: uppercase;
+        @include adaptiveValue("font-size", 24, 16);
+        @include adaptiveValue("line-height", 28, 20);
+        @include adaptiveValue("padding-top", 16, 8);
+        @include adaptiveValue("padding-bottom", 16, 8);
+        &:hover {
+            background: $purpleColor;
+            transition: .5s ease 0s;
+        }
+    }
+
+    &__handler {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        word-wrap: break-word;
+        font-size: rem(14);
+        line-height: rem(18);
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        list-style-type: none;
+        text-align: start;
+        @include adaptiveValue("padding-left", 16, 8);
+        @include adaptiveValue("padding-right", 16, 8);
+        @include adaptiveValue("margin-bottom", 40, 32);
+
+        &__info {
+            color: #4fa32a;
+            @include adaptiveValue("margin-top", 16, 8);
+            @include adaptiveValue("margin-bottom", 16, 8);
+            
+        }
+
+        &__error {
+            color: #a32a2a;
+            @include adaptiveValue("margin-top", 16, 8);
+            @include adaptiveValue("margin-bottom", 16, 8);
+        }
+    }
+
+}
