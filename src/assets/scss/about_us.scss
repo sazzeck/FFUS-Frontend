@@ -33,6 +33,7 @@
 
         @media (max-width: $mobile) {
             margin-right: 0;
+            @include adaptiveValue("margin-bottom", 56, 32);
         }
 
         &__wrapper {

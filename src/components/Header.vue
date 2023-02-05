@@ -5,9 +5,9 @@
             <div class="header__menu">
                 <nav class="header__menu__body">
                     <ul class="header__menu__list">
-                        <li class="header__menu__item"><a href="" class="header__menu__link">замовити</a></li>
-                        <li class="header__menu__item"><a href="" class="header__menu__link">про нас</a></li>
-                        <li class="header__menu__item"><a href="" class="header__menu__link">контакти</a></li>
+                        <li class="header__menu__item"><a href="#order" class="header__menu__link">замовити</a></li>
+                        <li class="header__menu__item"><a href="#about_us" class="header__menu__link">про нас</a></li>
+                        <li class="header__menu__item"><a href="#contacts" class="header__menu__link">контакти</a></li>
                     </ul>
                 </nav>
             </div>

@@ -25,7 +25,7 @@
                         <p class="main-block__item__icon _icon-b-hammer"></p>
                     </div>
                     <div class="main-block__bottom__right">
-                        <a href="" class="main-block__bottom__right__order">замовити</a>
+                        <a href="#order" class="main-block__bottom__right__order">замовити</a>
                     </div>
                 </div>
             </div>

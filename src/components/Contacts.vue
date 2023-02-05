@@ -1,5 +1,5 @@
 <template>
-    <section class="page__contacts contacts">
+    <section class="page__contacts contacts" id="contacts">
         <div class="contacts__container-big">
             <div class="contacts__container">
                 <div class="contacts__wrapper">
@@ -12,7 +12,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts__body">
+                    <div class="contacts__body" id="order">
                         <div class="contacts__body__wrapper">
                             <div class="contacts__body__header">
                                 <h1 class="contacts__body__header__lable">Залишіть заявку на консультацію</h1>

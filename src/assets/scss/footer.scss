@@ -79,6 +79,14 @@
                 @include adaptiveValue("height", 45, 35);
             }
 
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include adaptiveValue("height", 50, 40);
+                @include adaptiveValue("width", 50, 40);
+            }
+
             &__link {
                 @include adaptiveValue("font-size", 40, 30);
                 transition: all 0.5s ease 0s;

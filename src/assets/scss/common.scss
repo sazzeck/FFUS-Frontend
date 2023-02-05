@@ -61,13 +61,13 @@
         font-family: 'Raleway';
         font-weight: 900;
         text-transform: uppercase;
+        transition: 0.5s ease 0s;
         @include adaptiveValue("font-size", 24, 16);
         @include adaptiveValue("line-height", 28, 20);
         @include adaptiveValue("padding-top", 16, 8);
         @include adaptiveValue("padding-bottom", 16, 8);
         &:hover {
             background: $purpleColor;
-            transition: .5s ease 0s;
         }
     }
 
